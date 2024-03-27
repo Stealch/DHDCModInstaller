@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-//using System.Drawing;
 using System.IO;
-//using System.Collections.Generic;
-//using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
@@ -28,16 +25,10 @@ namespace DSDCModInstaller
                 string _toolkit = Path.GetFullPath(@"Decima\decima.bat"); // Путь к Decima Workshop
                 string _sourcesTMP = Path.GetFullPath(@"Sources"); // Путь к папке с ресурсами для перепаковки
                 string _sources = '\u0022' + _sourcesTMP + '\u0022'; // заключаем путь к ресурсам в кавычки
-
-                //Console.WriteLine(_value); // тестовая, подлежит удалению.
-                //Console.WriteLine(_path); // тестовая, подлежит удалению.
-               // Console.WriteLine(_toolkit); // тестовая, подлежит удалению.
-               //Console.WriteLine(_sources); // тестовая, подлежит удалению.
-                string _target = @"data\59b95a781c9170b0d13773766e27ad90.bin";
                 string _targetFile = '\u0022' + _value + _target + '\u0022'; // заключаем путь до целевого файла в кавычки
-               // Console.WriteLine(_targetFile); // тестовая, подлежит удалению.
 
                 // Отправка готовой команды для DW CLI
+
                 Process process = new Process();
                 {
                     process.StartInfo.FileName = _toolkit; //путь к приложению, которое будем запускать
@@ -55,8 +46,7 @@ namespace DSDCModInstaller
                 string _toolkit = Path.GetFullPath(@"Decima\decima.bat"); // Путь к Decima Workshop
                 string _sourcesTMP = Path.GetFullPath(@"Sources"); // Путь к папке с ресурсами для перепаковки
                 string _sources = '\u0022' + _sourcesTMP + '\u0022'; // заключаем путь к ресурсам в кавычки
-//                Console.WriteLine(_toolkit); // тестовая, подлежит удалению.
-//                Console.WriteLine(_sources); // тестовая, подлежит удалению.
+
                 OpenFileDialog ofd = new OpenFileDialog
                 {
                     Multiselect = false,
@@ -76,7 +66,6 @@ namespace DSDCModInstaller
                         process.Start();
                         
                     };
-                    //Console.WriteLine(_toolkit + " " + "repack " + "--backup " + "--project " + _path + " " + "--rebuild-prefetch " + "--changed-files-only " + _targetFile + " " + _sources); // тестовая, подлежит удалению.
                 }
                 Console.WriteLine("Press any key to exit");
                 Console.ReadKey(true);

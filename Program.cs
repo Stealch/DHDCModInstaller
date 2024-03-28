@@ -25,6 +25,7 @@ namespace DSDCModInstaller
                 string _toolkit = Path.GetFullPath(@"Decima\decima.bat"); // Путь к Decima Workshop
                 string _sourcesTMP = Path.GetFullPath(@"Sources"); // Путь к папке с ресурсами для перепаковки
                 string _sources = '\u0022' + _sourcesTMP + '\u0022'; // заключаем путь к ресурсам в кавычки
+                string _target = @"data\59b95a781c9170b0d13773766e27ad90.bin";
                 string _targetFile = '\u0022' + _value + _target + '\u0022'; // заключаем путь до целевого файла в кавычки
 
                 // Отправка готовой команды для DW CLI

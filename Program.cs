@@ -34,7 +34,7 @@ namespace DSDCModInstaller
                 {
                     process.StartInfo.FileName = _toolkit; //путь к приложению, которое будем запускать
                     process.StartInfo.WorkingDirectory = Path.GetFullPath(@"Decima\"); //путь к рабочей директории приложения
-                    process.StartInfo.Arguments = "repack " + "--backup " + "--project " + _path + " " + "--rebuild-prefetch " + "--changed-files-only " + _targetFile + " " + _sources +">log.txt"; //аргументы командной строки (параметры)
+                    process.StartInfo.Arguments = "repack " + "--backup " + "--project " + _path + " " + "--rebuild-prefetch " + "--changed-files-only " + _targetFile + " " + _sources; //аргументы командной строки (параметры)
                     process.Start();
                     Console.WriteLine("Press any key to exit");
                     Console.ReadKey(true);
@@ -63,7 +63,7 @@ namespace DSDCModInstaller
                     {
                         process.StartInfo.FileName = _toolkit; //путь к приложению, которое будем запускать
                         process.StartInfo.WorkingDirectory = Path.GetFullPath(@"Decima\"); //путь к рабочей директории приложения
-                        process.StartInfo.Arguments = "repack " + "--backup " + "--project " + _path + " " + "--rebuild-prefetch " + "--changed-files-only " + _targetFile + " " + _sources + ">log.txt"; //аргументы командной строки (параметры)
+                        process.StartInfo.Arguments = "repack " + "--backup " + "--project " + _path + " " + "--rebuild-prefetch " + "--changed-files-only " + _targetFile + " " + _sources; //аргументы командной строки (параметры)
                         process.Start();
                         
                     };
